@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://vjw7kr0reokr"]
+
+[ext_resource type="Texture2D" uid="uid://b1m8d1bybvmu5" path="res://wario.png" id="1_68ljo"]
+[ext_resource type="Script" uid="uid://gjwtmig8u8si" path="res://Scenes/title_scene.gd" id="1_b6ftn"]
+
+[sub_resource type="Theme" id="Theme_3bfn7"]
+
+[node name="TitleScreen" type="Node2D" unique_id=2008743362]
+script = ExtResource("1_b6ftn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=548494911]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6001237, 0.60047066)
+texture = ExtResource("1_68ljo")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1206019292]
+clip_contents = false
+offset_left = 35.0
+offset_top = -166.0
+offset_right = 1121.4426
+offset_bottom = 330.27728
+theme = SubResource("Theme_3bfn7")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.90359825, 0.90359825, 0.9035982, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/normal_font_size = 67
+text = "WarioWare Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1852448664]
+offset_left = 384.0
+offset_top = 147.0
+offset_right = 758.0
+offset_bottom = 414.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=2107911006]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "START"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=56480173]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1099947765]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "QUIT
+"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
