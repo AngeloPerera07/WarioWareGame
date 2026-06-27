@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cx1mhjrcb8jvw"]
+
+[ext_resource type="Script" uid="uid://dvarieanq7kwo" path="res://minigames_timer.gd" id="1_3lwqg"]
+
+[node name="timer_scene" type="Node2D" unique_id=244362392]
+script = ExtResource("1_3lwqg")
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1709106152]
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 407.0
+offset_bottom = 165.0
+theme_override_colors/default_color = Color(0.03238219, 0.03238219, 0.03238219, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 60
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1

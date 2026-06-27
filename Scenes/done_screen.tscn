@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c5m103cffgewc"]
+
+[ext_resource type="Texture2D" uid="uid://bcm7rgjtb148g" path="res://win.png" id="1_en6tx"]
+[ext_resource type="Texture2D" uid="uid://dnvoyla0ai2v2" path="res://wariowin.png" id="2_3rr80"]
+
+[node name="done_screen" type="Node2D" unique_id=838846287]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1749816664]
+offset_right = 1365.0
+offset_bottom = 768.0
+scale = Vector2(0.84395635, 0.8436431)
+texture = ExtResource("1_en6tx")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=587733711]
+offset_left = 11.999939
+offset_top = 308.99997
+offset_right = 811.99994
+offset_bottom = 1088.0
+scale = Vector2(0.44755468, 0.42398003)
+texture = ExtResource("2_3rr80")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=597296448]
+offset_left = 380.0
+offset_top = 409.0
+offset_right = 754.0
+offset_bottom = 676.0
+scale = Vector2(1.1107628, 1.1429485)
+
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=1931801063]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "RESTART
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1037459807]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "QUIT
+"

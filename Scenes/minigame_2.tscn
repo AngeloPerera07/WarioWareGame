@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://drjnwodke0q5r"]
+
+[ext_resource type="Texture2D" uid="uid://cduhgy3xpy5tf" path="res://yellow_background.png" id="1_psbsm"]
+[ext_resource type="Script" uid="uid://hr5tc875f36u" path="res://Scenes/minigame_2.gd" id="1_rfxq2"]
+[ext_resource type="Texture2D" uid="uid://rledk7qdsaq8" path="res://onion.png" id="2_l4g8r"]
+[ext_resource type="PackedScene" uid="uid://cx1mhjrcb8jvw" path="res://Scenes/timer_scene.tscn" id="3_dfb65"]
+[ext_resource type="Script" uid="uid://b08bdl7ansc82" path="res://Scenes/button.gd" id="3_rfxq2"]
+
+[node name="Minigame_2" type="Node2D" unique_id=264263716]
+script = ExtResource("1_rfxq2")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1283890157]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("1_psbsm")
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=2045262537]
+offset_left = 337.0
+offset_top = 118.0
+offset_right = 537.0
+offset_bottom = 318.0
+texture_normal = ExtResource("2_l4g8r")
+script = ExtResource("3_rfxq2")
+
+[node name="timer_scene" parent="." unique_id=244362392 instance=ExtResource("3_dfb65")]
+position = Vector2(869, 502)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=721827168]
+offset_left = 321.0
+offset_top = 32.0
+offset_right = 806.0
+offset_bottom = 110.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/normal_font_size = 55
+text = "Clicker Game"
+horizontal_alignment = 1
+vertical_alignment = 1
