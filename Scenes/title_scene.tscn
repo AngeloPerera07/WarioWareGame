@@ -55,5 +55,5 @@ theme_override_font_sizes/font_size = 50
 text = "QUIT
 "
 
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

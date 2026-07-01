@@ -209,3 +209,5 @@ shape = SubResource("CircleShape2D_3bfn7")
 
 [node name="ThemedTimer" parent="." unique_id=244362392 instance=ExtResource("2_0uv5o")]
 position = Vector2(829, 33)
+
+[connection signal="garlic_collected" from="Garlic" to="." method="garlic_collect"]

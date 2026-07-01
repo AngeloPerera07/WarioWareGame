@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/title_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 	
 func _on_start_pressed() -> void:
 	pass # Replace with function body.

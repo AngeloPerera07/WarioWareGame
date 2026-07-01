@@ -1,15 +1,22 @@
 extends Node2D
-
 @onready var player: CharacterBody2D = $"../Player"
 @onready var self_area = $Area2D
-# Using the safe get_node_or_null helper prevents the game from hard crashing
 @onready var player_area = $"../Player/Area2D"
 
+# make a signal
 signal garlic_collected
 
-func _process(delta: float) -> void:
-	# The "if player_area:" check ensures the game won't crash if loading order is slightly off
+func _process(delta: float) -> void: 
 	if player_area and player_area.overlaps_area(self_area):
+	 #if player_area.overlaps_area(self_area):
 		if self.visible:
 			emit_signal("garlic_collected")
-			self.hide()
+			self.hide() 
+		
+
+# Because you're emitting a signal here, you need to connect that signal to 
+# something to actually make it do a function. To do that, go to the
+# `Signals` menu next to the inspector tab and double click it. 
+# You would then need to connect it to the parent script or scene script
+# and also name it something. You can name it ` garlic_collect` as seen 
+# below, in the next script.

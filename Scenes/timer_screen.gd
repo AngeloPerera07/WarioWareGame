@@ -1,6 +1,4 @@
-
 extends Node2D
-
 @onready var garlic_container: HBoxContainer = $GarlicContainer
 @onready var garlic: TextureRect = $GarlicContainer/Garlic
 @onready var garlic_2: TextureRect = $GarlicContainer/Garlic2
@@ -13,18 +11,18 @@ extends Node2D
 var time
 
 func _ready() -> void:
-	await Timer(5.0)
-
+	await Timer(5.0) 
+	
 	if Global.minigames_done < 3:
-		Global.minigames_done = Global.minigames_done +1
+		Global.minigames_done = Global.minigames_done + 1
 		get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn")
+
 	else:
 		get_tree().change_scene_to_file("res://Scenes/title_scene.tscn")
+	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	match Global.lives:
+	match Global.lives: 
 		4:
 			garlic.hide()
 		3:
@@ -41,20 +39,19 @@ func _process(delta: float) -> void:
 			garlic_4.hide()
 		0:
 			garlic_container.hide()
-			
+	
 	timer.text = str(time)
-	level.text = "Level" + str(Global.minigamess_done)
-	
-func Timer(start_time: float):
-	
-	
-	time = start_time
+	level.text = "Level " + str(Global.minigames_done)
+
+func Timer(start_time: float): 
+
+	time = start_time 
 	
 	while time > 0.0:
-			await wait(0.1)
-			time -= 0.1
-			
-	return
+		await wait(0.1)
+		time -= 0.1 
 	
+	return
+
 func wait(seconds: float) -> void:
-	await get_tree().create_timer(seconds).timeout
+	await get_tree().create_timer(seconds).timeout 
