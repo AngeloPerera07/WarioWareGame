@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://cx1mhjrcb8jvw"]
 
 [ext_resource type="Script" uid="uid://dvarieanq7kwo" path="res://minigames_timer.gd" id="1_3lwqg"]
+[ext_resource type="Texture2D" uid="uid://cduhgy3xpy5tf" path="res://yellow_background.png" id="2_2khme"]
 
-[node name="timer_scene" type="Node2D" unique_id=244362392]
+[node name="ThemedTimer" type="Node2D" unique_id=244362392]
 script = ExtResource("1_3lwqg")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2090733296]
+visible = false
+
+[node name="ScrollingBackground" type="TextureRect" parent="Parallax2D" unique_id=67108379]
+offset_right = 1152.0
+offset_bottom = 649.0
+texture = ExtResource("2_2khme")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=1709106152]
 offset_left = -1.0

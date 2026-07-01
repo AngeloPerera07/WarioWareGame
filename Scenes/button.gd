@@ -9,4 +9,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	hide()
-	parent.button_pressed += 1
+	parent.buttons_pressed += 1

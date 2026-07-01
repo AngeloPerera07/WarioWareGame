@@ -65,8 +65,6 @@ radius = 43.0
 [node name="minigame_1" type="Node2D" unique_id=720748924]
 script = ExtResource("1_5txvl")
 
-[node name="ThemedTimer" parent="." unique_id=244362392 instance=ExtResource("2_0uv5o")]
-
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=761831893]
 repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(100, 0)
@@ -208,3 +206,6 @@ script = ExtResource("3_o6yob")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=2114695236]
 position = Vector2(762, 548)
 shape = SubResource("CircleShape2D_3bfn7")
+
+[node name="ThemedTimer" parent="." unique_id=244362392 instance=ExtResource("2_0uv5o")]
+position = Vector2(829, 33)
